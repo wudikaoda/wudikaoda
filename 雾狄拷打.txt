@@ -102,7 +102,7 @@ CoreGui:SetCore("SendNotification", {
 })
 
 
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/Tiger-Hub/main/loader.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/wudikaoda/wudikaoda/main/%E9%A3%9E%E8%A1%8C%E8%84%9A%E6%9C%AC(%E4%B8%AD%E6%96%87)(1).txt"))()
 		else
 CoreGui:SetCore("SendNotification", {
     Title = "检测结果",
