@@ -1,0 +1,116 @@
+local KeySytem = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Icon = Instance.new("TextLabel")
+local MainLabel = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local System = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Check = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local CoreGui = game:GetService("StarterGui")
+
+KeySytem.Name = "Key Sytem"
+KeySytem.Parent = game.CoreGui
+KeySytem.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = KeySytem
+Frame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Frame.Position = UDim2.new(0.363636374, 0, 0.339434266, 0)
+Frame.Size = UDim2.new(0, 278, 0, 193)
+Frame.Active = true
+Frame.Draggable = true
+
+UICorner.Parent = Frame
+
+Icon.Name = "Icon"
+Icon.Parent = Frame
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.Position = UDim2.new(-0.0215827338, 0, 0, 0)
+Icon.Size = UDim2.new(0, 60, 0, 50)
+Icon.Font = Enum.Font.Bangers
+Icon.Text = "飞行" 
+Icon.TextColor3 = Color3.fromRGB(255, 0, 0)
+Icon.TextScaled = true
+Icon.TextSize = 14.000
+Icon.TextWrapped = true
+
+MainLabel.Name = "MainLabel" 
+MainLabel.Parent = Frame
+MainLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainLabel.BackgroundTransparency = 1.000
+MainLabel.Position = UDim2.new(0.233812958, 0, 0, 0)
+MainLabel.Size = UDim2.new(0, 200, 0, 50)
+MainLabel.Font = Enum.Font.Bangers
+MainLabel.Text = "雾狄骑着你的妈妈飞走喽"
+MainLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainLabel.TextScaled = true
+MainLabel.TextSize = 40.000
+MainLabel.TextWrapped = true
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextBox.Position = UDim2.new(0.118705034, 0, 0.326424867, 0)
+TextBox.Size = UDim2.new(0, 212, 0, 34)
+TextBox.Font = Enum.Font.FredokaOne
+TextBox.Text = "农村入输你的卡密" 
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner_2.Parent = TextBox
+
+System.Name = "System" 
+System.Parent = Frame
+System.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+System.Position = UDim2.new(0.118705034, 0, 0.564766824, 0)
+System.Size = UDim2.new(0, 212, 0, 34)
+System.Font = Enum.Font.FredokaOne
+System.Text = "点击复制雾狄大蛇QQ群" 
+System.TextColor3 = Color3.fromRGB(255, 255, 255)
+System.TextScaled = true
+System.TextSize = 14.000
+System.TextWrapped = true
+System.MouseButton1Down:connect(function()
+setclipboard("809663605")
+print("成功复制")
+end)
+
+UICorner_3.Parent = System
+
+Check.Name = "Check" 
+Check.Parent = Frame
+Check.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Check.Position = UDim2.new(0.118705034, 0, 0.792746127, 0)
+Check.Size = UDim2.new(0, 212, 0, 34)
+Check.Font = Enum.Font.FredokaOne
+Check.Text = "检查密钥"
+Check.TextColor3 = Color3.fromRGB(255, 255, 255)
+Check.TextScaled = true
+Check.TextSize = 14.000
+Check.TextWrapped = true
+Check.MouseButton1Down:connect(function()
+	if TextBox.Text == "wudi" then
+		Frame.Visible = false 
+CoreGui:SetCore("SendNotification", {
+    Title = "检测结果",
+    Text = "雾狄卡密成功",
+    Duration = 5,
+})
+
+
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/plutoguy/Tiger-Hub/main/loader.lua"))()
+		else
+CoreGui:SetCore("SendNotification", {
+    Title = "检测结果",
+    Text = "农村人连卡密都不知道回家种田",
+    Duration = 5,
+})
+print("错误")
+	end
+end)
+
+UICorner_4.Parent = Check
