@@ -1,6 +1,6 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "Credits";
-                Text ="zhanghuihuihui";
+                Title = "开启雾狄飞行脚本成功";
+                Text ="感谢您的支持！";
                 Duration = 2.5;
             })
 -- Gui to Lua
